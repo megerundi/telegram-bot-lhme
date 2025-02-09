@@ -42,7 +42,7 @@ export default (bot) => {
       // Кнопка переключения (т.е. "Показать расписание из пункта B") и кнопка "Назад"
       const keyboard = {
         inline_keyboard: [
-          [{ text: 'Показать расписание из Краснодара', callback_data: `toggle_full_${bus}_A` }],
+          [{ text: 'Показать расписание из Афипской', callback_data: `toggle_full_${bus}_A` }],
           [{ text: 'Назад', callback_data: 'back_full' }]
         ]
       };
