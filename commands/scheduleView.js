@@ -51,7 +51,7 @@ export default (bot) => {
         const scheduleData = await localScheduleService.loadSchedule();
         const dayKey = getDayKey(); // "weekdays", "saturday" или "sunday"
 
-        let replyMsg = `<b>Расписание автобусов (${dayKey === 'weekdays' ? 'Будние дни' : dayKey === 'saturday' ? 'Суббота' : 'Воскресенье'}) на ближайшие ${filterHours} час(ов) для пункта ${departure}:</b>\n\n`;
+        let replyMsg = `<b>Расписание автобусов (${dayKey === 'weekdays' ? 'Будние дни' : dayKey === 'saturday' ? 'Суббота' : 'Воскресенье'}) на ближайшие ${filterHours} час(ов) для пункта ${departure == "A" ? "Краснодар" : "Афипский"}:</b>\n\n`;
         for (const bus in scheduleData) {
           if (Object.prototype.hasOwnProperty.call(scheduleData, bus)) {
             const busSchedule = scheduleData[bus][dayKey];
